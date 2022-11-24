@@ -119,6 +119,5 @@
         }
       }
     }
-  },
-  "defaultProject": "check-ts-mixer-angular15"
+  }
 }
