@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Mixin } from 'ts-mixer';
 
-class Hoge {
-  echoHoge(): void {
-    console.log('hoge');
+class Foo {
+  echoFoo(): void {
+    console.log('foo');
   }
 }
 
-class Fuga {
-  echoFuga(): void {
-    console.log('fuga');
+class Bar {
+  echoBar(): void {
+    console.log('bar');
   }
 }
 
@@ -18,11 +18,11 @@ class Fuga {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent extends Mixin(Hoge, Fuga) implements OnInit {
+export class AppComponent extends Mixin(Foo, Bar) implements OnInit {
   title = 'check-ts-mixer-angular15';
 
   ngOnInit(): void {
-    this.echoHoge();
-    this.echoFuga();
+    this.echoFoo();
+    this.echoBar();
   }
 }
